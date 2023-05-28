@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --my-color: #99DDCC
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    width: 100vw;
+    height: clamp(120px,5vw,100px);
+    background-color: black;
+    justify-content: center;
+}
+
+nav>h2{
+    padding: 3vmin;
+}
+
+nav>img{
+    height: 120px;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    overflow-y: hidden;
+}
+
+span{
+    color: var(--my-color);
+}
+
+.text-front{
+    flex-direction: column;
+    line-height: 50px;
+    word-wrap: break-word;
+}
+
+.text-back{
+    /* position: absolute;
+    width: 40vw;
+    height: 60vh; */
+    line-height: 30px;
+    overflow: scroll;
+    transform: rotateY(180deg);
+}
+
+.text-back::-webkit-scrollbar{
+    display: none;
+}
+
+.text-front,
+.text-back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    margin-top: 30px;
+}
+
+.image{
+    height: 80vh;
+    margin-top: 30px;
+}
+
+/* .body:hover> .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+} */
+
+.card{
+    position: relative;
+    top: 100px;
+    display: flex;
+    width: 40vw;
+    height: 60vh;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
