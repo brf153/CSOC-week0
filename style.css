@@ -97,3 +97,11 @@ span{
     cursor: pointer;
     transform: rotateY(180deg);
 }
+
+#weather-info{
+    border: 0;
+}
+
+/* #weather-info:focus{
+    outline: 0;
+} */

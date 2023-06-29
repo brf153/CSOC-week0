@@ -31,8 +31,17 @@
         </div>
         </div>
         <img class="image" src="./images/personal2.png">
-        <div class="sidebar">
-            <img id="chess" src="./images/channels4_profile.jpg" alt="/" width="80px" height="80px"/>
+        <div class="sidebar" style="display: flex; flex-direction: column;">
+            <img id="chess" style="cursor: pointer;" src="./images/channels4_profile.jpg" alt="/" width="80px" height="80px"/>
+            <div id="weather-box" style="display: flex;flex-direction: column;align-items: center;">
+                <img id="weather" style="cursor: pointer; " src="./images/1555512.png" alt="/" width="80px" height="80px" />
+                <input id="weather-info" value="data" style="width:50px" />
+                <form id="weather-input">
+                    <input id="inputField" style="width: 120px;" placeholder="Enter your location"/> 
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
         </div>
     </div>
     </div>
