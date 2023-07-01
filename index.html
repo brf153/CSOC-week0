@@ -32,15 +32,22 @@
         </div>
         <img class="image" src="./images/personal2.png">
         <div class="sidebar" style="display: flex; flex-direction: column;">
-            <img id="chess" style="cursor: pointer;" src="./images/channels4_profile.jpg" alt="/" width="80px" height="80px"/>
+            <img id="chess" style="cursor: pointer;position: relative; left: 20px;" src="./images/channels4_profile.jpg" alt="/" width="80px" height="80px"/>
             <div id="weather-box" style="display: flex;flex-direction: column;align-items: center;margin-right: 50px;">
                 <img id="weather" style="cursor: pointer; " src="./images/1555512.png" alt="/" width="80px" height="80px" />
-                <input id="weather-info-loc" value="data" style="width:auto; padding: 2px" />
+                <input id="weather-info-loc" value="data" style="width:120px; padding: 2px" />
                 <input id="weather-info-temp" value="data" style="width:110px" />
                 <form id="weather-input">
                     <input id="inputField" style="width: 120px;" placeholder="Enter your location"/> 
                     <button type="submit">Submit</button>
                 </form>
+                <audio controls>
+                    <source src="path/to/your-audio-file.mp3" type="audio/mpeg">
+                    <!-- Include additional sources for cross-browser compatibility -->
+                    <!-- <source src="path/to/your-audio-file.wav" type="audio/wav"> -->
+                    <!-- <source src="path/to/your-audio-file.ogg" type="audio/ogg"> -->
+                    Your browser does not support the audio element.
+                  </audio>
             </div>
 
         </div>
