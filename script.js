@@ -98,18 +98,13 @@ music_form.addEventListener("submit", function(event) {
 
   const options={
     method: 'GET',
-    headers: { 'X-Api-Key': 'cDGXjpdViLH7pPMSq4qFmQ==TylhWViHqFmPapLK'},
     contentType: 'application/json',
   }
 
-    fetch(`https://api.api-ninjas.com/v1/geocoding?city=${inputValue}`,options)
-    .then((e)=> e.text())
-    .then((e)=>{
-      console.log(JSON.parse(e)[0].latitude)
-      let lat = JSON.parse(e)[0].latitude
-      let long = JSON.parse(e)[0].longitude
-      fetchData(lat,long)
-    })
+  fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${inputValue}&api_key=0be90c65e43fd06155c0d012cd8b0c0c&format=json`,options).then((e)=>e.text()).then((e)=>{
+    console.log(JSON.parse(e).results.trackmatches.track[0].url)
+    window.location.href = JSON.parse(e).results.trackmatches.track[0].url
+  })
 
 });
 
@@ -126,7 +121,7 @@ function getAuth(){
   .then((e)=>e.text()).then((e)=>{
     console.log(JSON.parse(e))
     const token = JSON.parse(e).token
-    fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=Choo&api_key=0be90c65e43fd06155c0d012cd8b0c0c&format=json`,options).then((e)=>e.text()).then((e)=>console.log(JSON.parse(e)))
+    
   })
 }
 // window.location.href= `http://www.last.fm/api/auth/?api_key=${auth_key}&token=${token}`
