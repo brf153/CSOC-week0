@@ -98,7 +98,11 @@ span{
     transform: rotateY(180deg);
 }
 
-#weather-info{
+#weather-info-loc{
+    border: 0;
+}
+
+#weather-info-temp{
     border: 0;
 }
 
