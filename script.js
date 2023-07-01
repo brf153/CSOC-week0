@@ -11,8 +11,7 @@ const chess = document.getElementById("chess")
 
 chess.addEventListener("click",(e)=>{
   e.preventDefault()
-fetch("https://api.chess.com/pub/puzzle/random").then((e)=>{
-  // window.location.href=e.url.url  
+fetch("https://api.chess.com/pub/puzzle/random").then((e)=>{ 
 return e.text()
 }).then((e)=>{
   console.log(JSON.parse(e).url)
@@ -83,10 +82,6 @@ weatherbox.addEventListener("mouseout",(e)=>{
 
 // song api
 
-// API Key: 0be90c65e43fd06155c0d012cd8b0c0c
-
-// Shared Secret: 7768954ee663b6b9e149b7b911108a48
-
 const music_form = document.getElementById("music-input")
 
 music_form.addEventListener("submit", function(event) {
@@ -111,11 +106,11 @@ music_form.addEventListener("submit", function(event) {
 function getAuth(){
   const auth_key = "0be90c65e43fd06155c0d012cd8b0c0c"
   const options = {
-    method: 'GET', // You can use 'POST', 'PUT', 'DELETE', etc. if needed
+    method: 'GET', 
     headers: {
       'Origin': 'http://localhost:5500',
     },
-    mode: 'cors', // No comma after 'cors'
+    mode: 'cors',
   }
   fetch(`http://ws.audioscrobbler.com/2.0/?method=auth.gettoken&api_key=${auth_key}&format=json`)
   .then((e)=>e.text()).then((e)=>{
@@ -124,5 +119,3 @@ function getAuth(){
     
   })
 }
-// window.location.href= `http://www.last.fm/api/auth/?api_key=${auth_key}&token=${token}`
-// aKp-BsF0N2g8LiInxUBC7-70gjuRPVf_
